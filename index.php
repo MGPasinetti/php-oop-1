@@ -16,7 +16,7 @@ class Movie
     public $director;
     public $productionYear;
 
-    public $duration = 90 . ' min';
+    private $duration = 90 . ' min';
 
     public function __construct($_title, $_director, $_productionYear) {
         $this->title = $_title;
