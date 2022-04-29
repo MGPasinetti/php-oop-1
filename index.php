@@ -12,8 +12,26 @@ metodi d'istanza che abbiamo visto stamattina e create un file index.php in cui:
 
 class Movie
 {
+    public $title;
+    public $director;
+    public $productionYear;
 
+    public $duration = 90;
+
+    public function __construct($_title, $_director, $_productionYear) {
+        $this->title = $_title;
+        $this->director = $_director;
+        $this->productionYear = $_productionYear;
+    }
+
+    public function setDuration($_duration) {
+        $this->duration = $_duration;
+    }
 }
 
+$moviePulpFiction = new Movie('Pulp Fiction', 'Quentin Tarantino', '1994');
+$moviePulpFiction->setDuration(150);
+
+var_dump($moviePulpFiction);
 
 ?>
