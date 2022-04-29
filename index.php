@@ -16,7 +16,7 @@ class Movie
     public $director;
     public $productionYear;
 
-    public $duration = 90;
+    public $duration = 90 . ' min';
 
     public function __construct($_title, $_director, $_productionYear) {
         $this->title = $_title;
@@ -30,8 +30,13 @@ class Movie
 }
 
 $moviePulpFiction = new Movie('Pulp Fiction', 'Quentin Tarantino', '1994');
-$moviePulpFiction->setDuration(150);
+$moviePulpFiction->setDuration(150 . ' min');
 
 var_dump($moviePulpFiction);
+
+$movieTheDanishGirl = new Movie('The Danish Girl', 'Tom Hooper', '2015');
+$movieTheDanishGirl->setDuration(119 . ' min');
+
+var_dump($movieTheDanishGirl);
 
 ?>
